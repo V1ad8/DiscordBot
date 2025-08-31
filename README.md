@@ -23,8 +23,8 @@ It includes:
 ## **Quick Start**
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd <your-repo-directory>
+git clone https://github.com/V1ad8/DiscordBot.git
+cd DiscordBot
 
 # Install dependencies
 pip install -r requirements.txt
