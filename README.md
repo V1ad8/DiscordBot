@@ -82,6 +82,46 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## **Auto-Start with Windows Task Scheduler**
+
+You can configure the bot (and optionally the Minecraft server) to run automatically when your PC starts using **Windows Task Scheduler**.
+
+### **Steps**
+1. Press **Win + R**, type `taskschd.msc`, and press **Enter** to open Task Scheduler.
+2. In the **Actions** panel, click **Create Task...**.
+3. Under the **General** tab:
+   - Give the task a name (e.g., `Minecraft Discord Bot`).
+   - Select **Run whether user is logged on or not**.
+   - Check **Run with highest privileges**.
+4. Go to the **Triggers** tab:
+   - Click **New...**.
+   - Set **Begin the task** to **At startup**.
+   - Click **OK**.
+5. Go to the **Actions** tab:
+   - Click **New...**.
+   - For **Action**, select **Start a program**.
+   - In **Program/script**, enter:
+     ```
+     python
+     ```
+   - In **Add arguments (optional)**, enter:
+     ```
+     "C:\path\to\main.py"
+     ```
+   - In **Start in (optional)**, enter the directory where your script is located (e.g., `C:\path\to\project`).
+   - Click **OK**.
+6. Click **OK**, enter your Windows credentials when prompted.
+
+---
+
+### **Tips**
+- Ensure **Python** is added to your system PATH.
+- If you use a virtual environment, set **Program/script** to the Python executable inside your `venv` folder.
+- You can create a separate task for `run_server.py` if you want the server to start automatically.
+- To test the task, right-click it in Task Scheduler and select **Run**.
+
+
+
 ## Discord Bot Behavior
 
 If a role named Server-Manager exists, only members with this role or admins can use commands.
