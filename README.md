@@ -116,17 +116,13 @@ You can configure the bot (and optionally the Minecraft server) to run automatic
 
 ### **Tips**
 - Ensure **Python** is added to your system PATH.
-- If you use a virtual environment, set **Program/script** to the Python executable inside your `venv` folder.
-- You can create a separate task for `run_server.py` if you want the server to start automatically.
 - To test the task, right-click it in Task Scheduler and select **Run**.
-
-
 
 ## Discord Bot Behavior
 
-If a role named Server-Manager exists, only members with this role or admins can use commands.
+If a role named `Server-Manager` exists, only members with this role or admins can use commands.
 
-If a channel named bot-commands exists, the bot only responds there and deletes commands elsewhere.
+If a channel named `bot-commands` exists, the bot only responds there and deletes commands elsewhere.
 
 ## Commands
 
